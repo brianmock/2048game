@@ -54,11 +54,59 @@ GameView.prototype = {
     for (var x = 1; x < 5; x++) {
       for (var y = 1; y < 5; y++){
         $('#row' + x + ' > div:nth-child(' + y + ')').html(this.game.cells[x-1][y-1].value);
-        if (this.game.cells[x-1][y-1].value != "0"){
-          $('#row' + x + ' > div:nth-child(' + y + ')').css("background-color", "orange");
+        if (this.game.cells[x-1][y-1].value == "2"){
+          $('#row' + x + ' > div:nth-child(' + y + ')').css("background-color", "#EEE4DA");
+          $('#row' + x + ' > div:nth-child(' + y + ')').css("color", "#BBADA0");
+        }
+        else if (this.game.cells[x-1][y-1].value == "4"){
+          $('#row' + x + ' > div:nth-child(' + y + ')').css("background-color", "#EDE0C8");
+          $('#row' + x + ' > div:nth-child(' + y + ')').css("color", "#f9f6f2");
+        }
+        else if (this.game.cells[x-1][y-1].value == "8"){
+          $('#row' + x + ' > div:nth-child(' + y + ')').css("background-color", "#F2B179");
+          $('#row' + x + ' > div:nth-child(' + y + ')').css("color", "#f9f6f2");
+        }
+        else if (this.game.cells[x-1][y-1].value == "16"){
+          $('#row' + x + ' > div:nth-child(' + y + ')').css("background-color", "#F59563");
+          $('#row' + x + ' > div:nth-child(' + y + ')').css("color", "#f9f6f2");
+        }
+        else if (this.game.cells[x-1][y-1].value == "32"){
+          $('#row' + x + ' > div:nth-child(' + y + ')').css("background-color", "#F67C5F");
+          $('#row' + x + ' > div:nth-child(' + y + ')').css("color", "#f9f6f2");
+        }
+        else if (this.game.cells[x-1][y-1].value == "64"){
+          $('#row' + x + ' > div:nth-child(' + y + ')').css("background-color", "#f65e3b");
+          $('#row' + x + ' > div:nth-child(' + y + ')').css("color", "#f9f6f2");
+        }
+        else if (this.game.cells[x-1][y-1].value == "128"){
+          $('#row' + x + ' > div:nth-child(' + y + ')').css("background-color", "#edcc61");
+          $('#row' + x + ' > div:nth-child(' + y + ')').css("color", "#f9f6f2");
+          $('#row' + x + ' > div:nth-child(' + y + ')').css("box-shadow", "0 0 30px 10px rgba(243, 215, 116, 0.2381), inset 0 0 0 1px rgba(255, 255, 255, 0.14286)");
+        }
+        else if (this.game.cells[x-1][y-1].value == "256"){
+          $('#row' + x + ' > div:nth-child(' + y + ')').css("background-color", "#edcc61");
+          $('#row' + x + ' > div:nth-child(' + y + ')').css("color", "#f9f6f2");
+          $('#row' + x + ' > div:nth-child(' + y + ')').css("box-shadow", "0 0 30px 10px rgba(243, 215, 116, 0.2381), inset 0 0 0 1px rgba(255, 255, 255, 0.14286)");
+        }
+        else if (this.game.cells[x-1][y-1].value == "512"){
+          $('#row' + x + ' > div:nth-child(' + y + ')').css("background-color", "#edc850");
+          $('#row' + x + ' > div:nth-child(' + y + ')').css("color", "#f9f6f2");
+          $('#row' + x + ' > div:nth-child(' + y + ')').css("box-shadow", "0 0 30px 10px rgba(243, 215, 116, 0.2381), inset 0 0 0 1px rgba(255, 255, 255, 0.14286)");
+        }
+        else if (this.game.cells[x-1][y-1].value == "1024"){
+          $('#row' + x + ' > div:nth-child(' + y + ')').css("background-color", "#edc53f");
+          $('#row' + x + ' > div:nth-child(' + y + ')').css("color", "#f9f6f2");
+          $('#row' + x + ' > div:nth-child(' + y + ')').css("box-shadow", "0 0 30px 10px rgba(243, 215, 116, 0.2381), inset 0 0 0 1px rgba(255, 255, 255, 0.14286)");
+        }
+        else if (this.game.cells[x-1][y-1].value == "2048"){
+          $('#row' + x + ' > div:nth-child(' + y + ')').css("background-color", "#edc22e");
+          $('#row' + x + ' > div:nth-child(' + y + ')').css("color", "#f9f6f2");
+          $('#row' + x + ' > div:nth-child(' + y + ')').css("box-shadow", "0 0 30px 10px rgba(243, 215, 116, 0.2381), inset 0 0 0 1px rgba(255, 255, 255, 0.14286)");
         }
         else {
-          $('#row' + x + ' > div:nth-child(' + y + ')').css("background-color", "yellow");
+          $('#row' + x + ' > div:nth-child(' + y + ')').css("background-color", "#CDC1B4");
+          $('#row' + x + ' > div:nth-child(' + y + ')').css("color", "#CDC1B4");
+          $('#row' + x + ' > div:nth-child(' + y + ')').html("-");
         }
       }
     }

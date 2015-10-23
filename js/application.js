@@ -1,4 +1,4 @@
-game = new Game("0202020202020202");
+game = new Game("0200020000000000");
 game.initCells();
 view = new GameView(game);
 
